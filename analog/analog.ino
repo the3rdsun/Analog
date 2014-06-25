@@ -1,4 +1,5 @@
-int sensorValue;
+int sensorValue1;
+int sensorValue2;
 
 void setup() {
   Serial.begin(9600);
@@ -7,9 +8,12 @@ void setup() {
 }
 
 void loop() {
-  sensorValue = analogRead(0);
-  Serial.println(sensorValue);
+  sensorValue1 = analogRead(0);
+  sensorValue2 = analogRead(1);
+  Serial.print(sensorValue1);
+  Serial.print(",");
+  Serial.println(sensorValue2);
   
-  delay(1000); 
+  delay(100); 
   
 }
